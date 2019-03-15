@@ -4,6 +4,9 @@ class BlogsController < OpenReadController
   # GET /blogs
   def index
     @blogs = Blog.all
+    if params['user-owned']
+      @blogs = current_user.blogs.all
+    end
 
     render json: @blogs
   end
@@ -39,13 +42,14 @@ class BlogsController < OpenReadController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = current_user.blogs.find(params[:id])
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = current_user.blogs.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
-    def blog_params
-      params.require(:blog).permit(:blog_name, :content)
+  # Only allow a trusted parameter "white list" through.
+  def blog_params
+    params.require(:blog).permit(:blog_name, :content)
     end
 end

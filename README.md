@@ -54,7 +54,7 @@ application. This was the strategy used to approach this program:
 - Responsive design for screens of varying size.
 
 ## Routes
-Prefix Verb   URI Pattern                Controller#Action
+```Prefix Verb   URI Pattern                Controller#Action
    blogs GET    /blogs(.:format)           blogs#index
          POST   /blogs(.:format)           blogs#create
     blog GET    /blogs/:id(.:format)       blogs#show
@@ -70,7 +70,7 @@ examples GET    /examples(.:format)        examples#index
  sign_up POST   /sign-up(.:format)         users#signup
  sign_in POST   /sign-in(.:format)         users#signin
 sign_out DELETE /sign-out(.:format)        users#signout
-change_password PATCH  /change-password(.:format) users#changepw
+change_password PATCH  /change-password(.:format) users#changepw```
 
 ## ERD
 1. [ ] [ERD located here.](https://imgur.com/I7UQdYV)

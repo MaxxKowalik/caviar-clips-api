@@ -53,6 +53,20 @@ application. This was the strategy used to approach this program:
 - Ability to view all your comments and which blogs they reside in.
 - Responsive design for screens of varying size.
 
+## Routes
+Verb - URI Pattern - Request Body - Headers - Action
+
+POST - /sign-up - credentials -	N/A	- user sign-up
+POST - /sign-in	- credentials	- N/A	- user sign-in
+DELETE - /sign-out	- N/A	- Token	- user sign-out
+PATCH	- /change-password - passwords - Token - change-password
+
+POST - /blogs - blog: {} - Token - create blog
+GET	- /blogs/ - N/A - N/A - index blogs
+GET - /user-blogs - N/A - Token - index user blogs
+DELETE - /blogs/:id - N/A - Token - remove blog
+PATCH	- /blogs/:id - blog delta - Token - update blog
+
 ## ERD
 1. [ ] [ERD located here.](https://imgur.com/I7UQdYV)
 

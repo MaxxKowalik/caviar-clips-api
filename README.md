@@ -62,12 +62,6 @@ Prefix Verb   URI Pattern                Controller#Action
          PATCH  /blogs/:id(.:format)       blogs#update
          PUT    /blogs/:id(.:format)       blogs#update
          DELETE /blogs/:id(.:format)       blogs#destroy
-examples GET    /examples(.:format)        examples#index
-         POST   /examples(.:format)        examples#create
- example GET    /examples/:id(.:format)    examples#show
-         PATCH  /examples/:id(.:format)    examples#update
-         PUT    /examples/:id(.:format)    examples#update
-         DELETE /examples/:id(.:format)    examples#destroy
  sign_up POST   /sign-up(.:format)         users#signup
  sign_in POST   /sign-in(.:format)         users#signin
 sign_out DELETE /sign-out(.:format)        users#signout
